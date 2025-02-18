@@ -1,0 +1,50 @@
+{
+    "interactionModel": {
+      "languageModel": {
+        "invocationName": "magic storyland",
+        "intents": [
+          {
+            "name": "StoryIntent",
+            "slots": [
+              {
+                "name": "subject",
+                "type": "AMAZON.LITERAL"
+              },
+              {
+                "name": "theme",
+                "type": "AMAZON.LITERAL"
+              },
+              {
+                "name": "activity",
+                "type": "AMAZON.LITERAL"
+              },
+              {
+                "name": "additionalElements",
+                "type": "AMAZON.LITERAL"
+              }
+            ],
+            "samples": [
+              "tell me a story about {subject}",
+              "tell me a story about a {subject} with a {theme} theme",
+              "tell me a story about a {subject} {activity}",
+              "tell me a story"
+            ]
+          },
+          {
+            "name": "AMAZON.HelpIntent",
+            "samples": []
+          },
+          {
+            "name": "AMAZON.CancelIntent",
+            "samples": []
+          },
+          {
+            "name": "AMAZON.StopIntent",
+            "samples": []
+          }
+        ],
+        "types": []
+      }
+    }
+  }
+  
