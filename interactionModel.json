@@ -8,19 +8,19 @@
             "slots": [
               {
                 "name": "subject",
-                "type": "AMAZON.LITERAL"
+                "type": "STORY_SUBJECT"
               },
               {
                 "name": "theme",
-                "type": "AMAZON.LITERAL"
+                "type": "STORY_THEME"
               },
               {
                 "name": "activity",
-                "type": "AMAZON.LITERAL"
+                "type": "STORY_ACTIVITY"
               },
               {
                 "name": "additionalElements",
-                "type": "AMAZON.LITERAL"
+                "type": "STORY_ELEMENTS"
               }
             ],
             "samples": [
@@ -43,7 +43,44 @@
             "samples": []
           }
         ],
-        "types": []
+        "types": [
+          {
+            "name": "STORY_SUBJECT",
+            "values": [
+              {"name": {"value": "monkey"}},
+              {"name": {"value": "robot"}},
+              {"name": {"value": "princess"}},
+              {"name": {"value": "dragon"}}
+            ]
+          },
+          {
+            "name": "STORY_THEME",
+            "values": [
+              {"name": {"value": "adventure"}},
+              {"name": {"value": "friendship"}},
+              {"name": {"value": "courage"}},
+              {"name": {"value": "kindness"}}
+            ]
+          },
+          {
+            "name": "STORY_ACTIVITY",
+            "values": [
+              {"name": {"value": "in a magical forest"}},
+              {"name": {"value": "in space"}},
+              {"name": {"value": "at the beach"}},
+              {"name": {"value": "in a castle"}}
+            ]
+          },
+          {
+            "name": "STORY_ELEMENTS",
+            "values": [
+              {"name": {"value": "magic wand"}},
+              {"name": {"value": "treasure"}},
+              {"name": {"value": "mysterious map"}},
+              {"name": {"value": "special powers"}}
+            ]
+          }
+        ]
       }
     }
   }
