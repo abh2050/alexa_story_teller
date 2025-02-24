@@ -38,6 +38,14 @@ def generate_story(prompt, max_tokens):
     story_text = response.json().get("generated_text")
     return story_text
 
+def sanitize_ssml(text):
+    """Sanitize text for SSML"""
+    return (text.replace("&", "&amp;")
+                .replace("<", "&lt;")
+                .replace(">", "&gt;")
+                .replace('"', "&quot;")
+                .replace("'", "&apos;"))
+
 class LaunchRequestHandler(AbstractRequestHandler):
     """Handler for Skill Launch."""
     def can_handle(self, handler_input):
@@ -89,7 +97,7 @@ class StoryIntentHandler(AbstractRequestHandler):
             story = "I'm sorry, I encountered an error while generating your story. Please try again later."
         
         # Wrap the story in SSML for better voice rendering (optional)
-        speech_output = f"<speak>{story}</speak>"
+        speech_output = f"<speak>{sanitize_ssml(story)}</speak>"
         return handler_input.response_builder.speak(speech_output).set_should_end_session(True).response
 
 class HelpIntentHandler(AbstractRequestHandler):
